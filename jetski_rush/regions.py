@@ -14,6 +14,7 @@ def get_location_names_with_ids(location_names: list[str]) -> dict[str, int | No
 
 def create_regions_and_locations(world: JetskiRushWorld) -> None:
     regions = ["Track Select", "Seaside Factory", "Arctic Iceway", "Kabuki Peaks", "Fungal Forest", "Crossbone Cove", "Aquatic Arena", "Temple Ravine", "Candy Canyon", "Hollow Castle", "Retro Rush", "Cosmic Circuit", "Pyro Peak"]
+    
     track_select = Region("Track Select", world.player, world.multiworld)
     regions.append(track_select)
 
@@ -113,15 +114,15 @@ def create_regions_and_locations(world: JetskiRushWorld) -> None:
     ]))
     regions.append(pyro_peak)
 
-    track_select.connect(seaside_factory)
-    track_select.connect(arctic_iceway)
-    track_select.connect(kabuki_peaks)
-    track_select.connect(fungal_forest)
-    track_select.connect(crossbone_cove)
-    track_select.connect(aquatic_arena)
-    track_select.connect(temple_ravine)
-    track_select.connect(candy_canyon)
-    track_select.connect(hollow_castle)
-    track_select.connect(retro_rush)
-    track_select.connect(cosmic_circuit)
-    track_select.connect(pyro_peak)
+    track_select.connect(seaside_factory, "Seaside Factory Access")
+    track_select.connect(arctic_iceway, "Arctic Iceway Access")
+    track_select.connect(kabuki_peaks, "Kabuki Peaks Access")
+    track_select.connect(fungal_forest, "Fungal Forest Access")
+    track_select.connect(crossbone_cove, "Crossbone Cove Access")
+    track_select.connect(aquatic_arena, "Aquatic Arena Access")
+    track_select.connect(temple_ravine, "Temple Ravine Access")
+    track_select.connect(candy_canyon, "Candy Canyon Access")
+    track_select.connect(hollow_castle, "Hollow Castle Access")
+    track_select.connect(retro_rush, "Retro Rush Access")
+    track_select.connect(cosmic_circuit, "Cosmic Circuit Access")
+    track_select.connect(pyro_peak, "Pyro Peak Access")
