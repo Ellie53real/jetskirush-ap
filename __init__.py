@@ -30,7 +30,7 @@ class JetskiRushWorld(World):
     options: JetskiRushOptions
     location_name_to_id = LOCATION_IDS
     item_name_to_id = ITEM_IDS
-    origin_region_name = "Course Select"
+    origin_region_name = "Track Select"
 
     def create_regions(self):
         return regions.create_regions_and_locations(self)
