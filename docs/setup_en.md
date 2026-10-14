@@ -25,6 +25,7 @@ To host a game on archipelago.gg, simply go to the site, select ``Host Game`` un
 
 ## Connecting to the multiworld
 * Launch VRChat on Steam, and create a new private instance of Jetski Rush.
+* If you haven't already, go to the Settings, and make sure that ``Logging`` (under ``Debug``) is set to ``Full``; the implementation relies on the game logging information to a file to work.
 * Run the Jetski Rush Client from the Archipelago Launcher.
 * The client will ask you to locate the log file for your current VRChat session; by default, these logs are located at ``C:/Users/[user]/AppData/LocalLow/VRChat/VRChat``.
 * Once the log file is selected, the client will start tracking information from the logs!
