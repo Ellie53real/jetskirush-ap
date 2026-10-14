@@ -1,0 +1,19 @@
+from BaseClasses import Item, ItemClassification
+
+ITEM_TABLE = {
+    "Seaside Factory": 200,
+    "Arctic Iceway": 201,
+    "Kabuki Peaks": 202,
+    "Fungal Forest": 203,
+    "Crossbone Cove": 204,
+    "Aquatic Arena": 205,
+    "Temple Ravine": 206,
+    "Candy Canyon": 207,
+    "Hollow Castle": 208,
+    "Retro Rush": 209,
+    "Cosmic Circuit": 210,
+    "Pyro Peak": 211,
+}
+
+class JetskiRushItem(Item):
+    game = "Jetski Rush"
