@@ -13,6 +13,7 @@ ITEM_TABLE = {
     "Retro Rush": 209,
     "Cosmic Circuit": 210,
     "Pyro Peak": 211,
+    "Trophy": 212,
 }
 
 class JetskiRushItem(Item):
