@@ -8,29 +8,8 @@ if TYPE_CHECKING:
 
 def set_all_rules(world: JetskiRushWorld) -> None:
     for location in LOCATION_IDS.keys():
-        if "Seaside Factory" in location:
-            world.set_rule(location, Has("Seaside Factory"))
-        elif "Arctic Iceway" in location:
-            world.set_rule(location, Has("Arctic Iceway"))
-        elif "Kabuki Peaks" in location:
-            world.set_rule(location, Has("Kabuki Peaks"))
-        elif "Fungal Forest" in location:
-            world.set_rule(location, Has("Fungal Forest"))
-        elif "Crossbone Cove" in location:
-            world.set_rule(location, Has("Crossbone Cove"))
-        elif "Aquatic Arena" in location:
-            world.set_rule(location, Has("Aquatic Arena"))
-        elif "Temple Ravine" in location:
-            world.set_rule(location, Has("Temple Ravine"))
-        elif "Candy Canyon" in location:
-            world.set_rule(location, Has("Candy Canyon"))
-        elif "Hollow Castle" in location:
-            world.set_rule(location, Has("Hollow Castle"))
-        elif "Retro Rush" in location:
-            world.set_rule(location, Has("Retro Rush"))
-        elif "Cosmic Circuit" in location:
-            world.set_rule(location, Has("Cosmic Circuit"))
-        elif "Pyro Peak" in location:
-            world.set_rule(location, Has("Pyro Peak"))
+        for track in TRACK_NAMES.keys():
+            if track in location:
+                world.set_rule(location, Has(track))
 
 world.set_completion_rule(Has("Trophy", count=world.options.track_requirement))
