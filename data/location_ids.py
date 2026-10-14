@@ -35,5 +35,4 @@ LOCATION_IDS = {
     "Pyro Peak - Finish": 233,
     "Pyro Peak - Finish (Trophy)": 234,
     "Pyro Peak - Time Trial in 3:45": 235,
-    "Trophy Requirement Met": 236,
 }
