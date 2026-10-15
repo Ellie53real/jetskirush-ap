@@ -3,7 +3,7 @@ from BaseClasses import Tutorial
 from . import items, regions, rules
 from .options import JetskiRushOptions
 from .data.location_ids import LOCATION_IDS
-from .data.item_ids import ITEM_IDS
+from .items import ITEM_TABLE
 
 class JetskiRushWebWorld(WebWorld):
     game = "Jetski Rush"
@@ -29,7 +29,7 @@ class JetskiRushWorld(World):
     options_dataclass = JetskiRushOptions
     options: JetskiRushOptions
     location_name_to_id = LOCATION_IDS
-    item_name_to_id = ITEM_IDS
+    item_name_to_id = ITEM_TABLE
     origin_region_name = "Track Select"
 
     def create_regions(self):
