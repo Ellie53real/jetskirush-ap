@@ -1,7 +1,6 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING
 from rule_builder.rules import *
-from .tracks import TRACK_NAMES
 from .data.location_ids import LOCATION_IDS
 
 if TYPE_CHECKING:
