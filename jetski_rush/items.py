@@ -28,5 +28,5 @@ def create_item_with_classification(world: JetskiRushWorld, item_name: str, clas
     return JetskiRushItem(item_name, classification, ITEM_TABLE[item_name], world.player)
 
 def create_all_items(world: JetskiRushWorld) -> None:
-
+    # To do: create the items
     pass
