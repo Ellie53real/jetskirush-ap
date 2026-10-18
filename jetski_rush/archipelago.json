@@ -1,6 +1,7 @@
 {
     "game": "Jetski Rush",
-    "minimum_ap_version": "0.6.7",
     "world_version": "0.1.0",
-    "authors": ["Ellie53"]
+    "contributors": ["Ellie53"],
+    "compatible_version": 7,
+    "minimum_ap_version": "0.6.7"
 }
