@@ -1,9 +1,11 @@
 from __future__ import annotations
-from typing import TYPE_CHECKING
 from BaseClasses import Item, ItemClassification
-from worlds.generic.Rules import CollectionState
-if TYPE_CHECKING:
-    from .__init__ import JetskiRushWorld
+
+class JetskiRushItem(Item):
+    game = "Jetski Rush"
+
+class ItemDict(TypedDict):
+    name: str
 
 ITEM_TABLE = {
     "Seaside Factory": 200,
@@ -21,11 +23,25 @@ ITEM_TABLE = {
     "Trophy": 212,
 }
 
-class JetskiRushItem(Item):
-    game = "Jetski Rush"
+ITEM_CLASSIFICATIONS = {
+    "Seaside Factory": ItemClassification.progression,
+    "Arctice Iceway": ItemClassification.progression,
+    "Kabuki Peaks": ItemClassification.progression,
+    "Fungal Forest": ItemClassification.progression,
+    "Crossbone Cove": ItemClassification.progression,
+    "Aquatic Arena": ItemClassification.progression,
+    "Temple Ravine": ItemClassification.progression,
+    "Candy Canyon": ItemClassification.progression,
+    "Hollow Castle": ItemClassification.progression,
+    "Retro Rush": ItemClassification.progression,
+    "Cosmic Circuit": ItemClassification.progression,
+    "Pyro Peak": ItemClassification.progression,
+    "Trophy": ItemClassification.progression,
+}
 
-def create_item_with_classification(world: JetskiRushWorld, item_name: str, classification: ItemClassification) -> JetskiRushItem:
-    return JetskiRushItem(item_name, classification, ITEM_TABLE[item_name], world.player)
+def create_item_with_classification(world: JetskiRushWorld, name: str) -> JetskiRushItem:
+    classification = ITEM_CLASSIFICATIONS[name]
+    return JetskiRushItem(name, classification, ITEM_TABLE[name], world.player)
 
 def create_all_items(world: JetskiRushWorld) -> None:
     # To do: create the items
