@@ -1,6 +1,9 @@
 from __future__ import annotations
 from BaseClasses import Item, ItemClassification
-from typing import TypedDict
+from typing import TypedDict, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from .__init__ import JetskiRushWorld
 
 class JetskiRushItem(Item):
     game = "Jetski Rush"

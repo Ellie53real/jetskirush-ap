@@ -1,6 +1,10 @@
 from __future__ import annotations
+from typing import TYPE_CHECKING
 from BaseClasses import Region, Location
 from .data.location_ids import LOCATION_IDS
+
+if TYPE_CHECKING:
+    from .__init__ import JetskiRushWorld
 
 class JetskiRushLocation(Location):
     game = "Jetski Rush"
