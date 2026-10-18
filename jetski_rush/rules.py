@@ -1,10 +1,6 @@
 from __future__ import annotations
-from typing import TYPE_CHECKING
 from rule_builder.rules import *
 from .data.location_ids import LOCATION_IDS
-
-if TYPE_CHECKING:
-    from .__init__ import JetskiRushWorld
 
 def set_all_rules(world: JetskiRushWorld) -> None:
     seaside_factory_access = world.get_entrance("Seaside Factory Access")
