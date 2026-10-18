@@ -1,3 +1,3 @@
 # AI Disclosure
-I did not make any direct use of AI in the process of making this implementation. I *did*, however, reference code from [Ninpalk's *Fall Guys* implementation](https://github.com/ninpalk/FallGuysAP); their AI disclosure reads as follows:
+I did not make any direct use of AI in the process of making this implementation. I *did*, however, reference code from [Ninpalk's *Fall Guys* implementation](https://github.com/ninpalk/FallGuysAP) in the process of writing the client; their AI disclosure reads as follows:
 * "Used ChatGPT to help with the client on this project as I am by no means a good coder, but I hope you all enjoy playing this regardless! I want to make a manmade apworld in the future, but considering this is a game that could end of service at any point it didnt make sense for this to be the one to put so many hours into learning for"
