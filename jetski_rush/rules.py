@@ -21,4 +21,4 @@ def set_all_rules(world: JetskiRushWorld) -> None:
     cosmic_circuit_access = world.get_entrance("Cosmic Circuit Access")
     pyro_peak_access = world.get_entrance("Pyro Peak Access")
 
-    world.set_completion_rule(Has("Trophy", count=world.options.track_requirement))
+    world.set_completion_rule(Has("Trophy", count=world.options.track_requirement.value))
