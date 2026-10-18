@@ -50,7 +50,7 @@ def create_regions_and_locations(world: JetskiRushWorld) -> None:
     crossbone_cove.add_locations(get_location_names_with_ids([
         "Crossbone Cove - Finish",
         "Crossbone Cove - Finish (Trophy)",
-        "Crossbone Cove - Time Trial in 2:00"
+        "Crossbone Cove - Time Trial in 3:45"
     ]))
     regions.append(crossbone_cove)
 
@@ -90,7 +90,7 @@ def create_regions_and_locations(world: JetskiRushWorld) -> None:
     retro_rush.add_locations(get_location_names_with_ids([
         "Retro Rush - Finish",
         "Retro Rush - Finish (Trophy)",
-        "Retro Rush - Time Trial in 2:00"
+        "Retro Rush - Time Trial in 3:15"
     ]))
     regions.append(retro_rush)
 
