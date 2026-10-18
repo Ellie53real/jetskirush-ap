@@ -78,7 +78,7 @@ def create_item_with_classification(world: JetskiRushWorld, name: str) -> Jetski
     return JetskiRushItem(name, classification, ITEM_TABLE[name], world.player)
 
 def create_all_items(world: JetskiRushWorld) -> None:
-    itempool = list[Item] = []
+    itempool = list(ITEM_TABLE)
 
     unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))
     filler_count = unfilled_locations - len(itempool)

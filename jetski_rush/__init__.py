@@ -3,7 +3,7 @@ from BaseClasses import Tutorial
 from . import items, regions, rules
 from .options import JetskiRushOptions
 from .data.location_ids import LOCATION_IDS
-from .items import ITEM_TABLE
+from .items import ITEM_TABLE, random_fillers
 
 class JetskiRushWebWorld(WebWorld):
     game = "Jetski Rush"
