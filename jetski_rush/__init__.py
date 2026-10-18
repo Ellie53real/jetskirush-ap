@@ -45,4 +45,4 @@ class JetskiRushWorld(World):
         return items.create_item_with_classification(self, name)
 
     def get_filler_item_name(self) -> str:
-        return "VRChat Credits"
+        return random_fillers(self)

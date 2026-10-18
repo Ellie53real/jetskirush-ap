@@ -25,6 +25,14 @@ ITEM_TABLE = {
     "Cosmic Circuit": 210,
     "Pyro Peak": 211,
     "Trophy": 212,
+    "VRChat Credits": 213,
+    "Sea Salt Soda": 214,
+    "Lollipop": 215,
+    "Pile of Bones": 216,
+    "Pumice": 217,
+    "Mushroom": 218,
+    "Snow Brick": 219,
+    "Bucket and Shovel": 220,
 }
 
 ITEM_CLASSIFICATIONS = {
@@ -41,12 +49,39 @@ ITEM_CLASSIFICATIONS = {
     "Cosmic Circuit": ItemClassification.progression,
     "Pyro Peak": ItemClassification.progression,
     "Trophy": ItemClassification.progression,
+    "VRChat Credits": ItemClassification.filler,
+    "Sea Salt Soda": ItemClassification.filler,
+    "Lollipop": ItemClassification.filler,
+    "Pile of Bones": ItemClassification.filler,
+    "Pumice": ItemClassification.filler,
+    "Mushroom": ItemClassification.filler,
+    "Snow Brick": ItemClassification.filler,
+    "Bucket and Shovel": ItemClassification.filler,
 }
+
+FILLER_ITEMS = {
+    "VRChat Credits",
+    "Sea Salt Soda",
+    "Lollipop",
+    "Pile of Bones",
+    "Pumice",
+    "Mushroom",
+    "Snow Brick",
+    "Bucket and Shovel",
+}
+
+def random_fillers(world) -> str:
+    return world.random.choice(FILLER_ITEMS)
 
 def create_item_with_classification(world: JetskiRushWorld, name: str) -> JetskiRushItem:
     classification = ITEM_CLASSIFICATIONS[name]
     return JetskiRushItem(name, classification, ITEM_TABLE[name], world.player)
 
 def create_all_items(world: JetskiRushWorld) -> None:
-    # To do: create the items
-    pass
+    itempool = list[Item] = []
+
+    unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))
+    filler_count = unfilled_locations - len(itempool)
+    itempool += [world.create_filler() for _ in range(filler_count)]
+
+    world.multiworld.itempool += itempool
