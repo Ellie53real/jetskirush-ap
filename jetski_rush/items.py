@@ -1,5 +1,6 @@
 from __future__ import annotations
 from BaseClasses import Item, ItemClassification
+from typing import TypedDict
 
 class JetskiRushItem(Item):
     game = "Jetski Rush"
